@@ -1,0 +1,35 @@
+리눅스 신규 디스크 인식 쉘 스크립트 
+
+ - 스크립트 내용 이해를 위해 리눅스 기초 및 관리 기술을 알아야 함.
+ - 쉘 스크립트 생선 전 사용할 명령들을 나열해보는 것이 필요.
+
+
+ ** 신규 디스크 인식 **
+  1. 정보 확인
+   - lspci
+   - grep
+   - awk
+  2. 파일 검색
+   - find
+   - grep
+  3. 디스크 인식
+   - echo
+   - tee
+  4. 디스크 확인
+   - lsblk
+
+1. 정보 확인
+ - 디스크 컨트롤러 (HBA : Host Bus Adapter) 정보 확인
+ - /sys/devices 디렉터리에 디스크 컨트롤러에 관련된 scan 파일 존재
+
+2. 파일검색
+ - /sys/devices 디렉터리에서 scan 파일 검색 
+
+3. 디스크 인식
+ - scan 파일에 디스크 인식을 위한 Wildcard 문자 전달
+ - 여기서 '-' (Dash) 기호는 All의 뜻을 가지고 있음.
+ - '---'는 모든 채널(Channel), 모든 타겟(TArget), 모든 LUN을 나타냄.
+
+
+자세한 내용은 https://www.youtube.com/watch?v=59by9c2eylc&list=PLTJfebMjBKSLv0yQrgCOBLZtvBBD5lWqu&index=4
+
