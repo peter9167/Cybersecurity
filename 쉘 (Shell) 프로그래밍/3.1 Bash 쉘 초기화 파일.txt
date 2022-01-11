@@ -1,0 +1,17 @@
+Bash 쉘 초기화 파일
+
+ - 사용자 로그인 시 쉘이 호출될 때 쉘 자체 및 사용자 환경을 설정하는데 사용되는 파일.
+ - 보통 지역/환경 변수, 별칭, 함수 umask 값을 설정하기 위해 사용.
+ - System-wide files : 관련 쉘을 사용하는 사용자 전체에게 영향을 끼치는 파일.
+ - User Configuration files : 해당 사용자에게만 영향을 끼치는 파일.
+
+
+  System-wide		User Configuration
+
+   - /etc/profile		- $HOME/.bash_profile
+   - /etc/bashrc		- $HOME/.bashrc
+			- $HOME/.bash logout
+
+
+
+
